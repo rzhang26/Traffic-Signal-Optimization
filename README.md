@@ -1,6 +1,7 @@
 # Traffic-Signal-Optimization
 make a project (some form of data science based community optimization algorithm / ai) for specific district
 inspiration: https://youtu.be/9ye0zbif5ME?si=k7GVHHZh62Msyfus (find repo somewhere: "EcoVision" for the Designpreneurs AI Design Hackathon)
+
 *imperfect* traffic signal opimization tool-- fails to take into account certain things like population density, etc
 
 Workflow
