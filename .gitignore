@@ -1,0 +1,22 @@
+# Node.js / Frontend 
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.env
+
+# Python / Backend 
+/backend/env/
+/backend/__pycache__/
+/backend/*.pyc
+/backend/.env
+
+# Data & Database 
+/data/
+/db/
+
+# OS-specific files 
+.DS_Store
+Thumbs.db
+
+# Editor/IDE files 
+.vscode/
+.idea/
