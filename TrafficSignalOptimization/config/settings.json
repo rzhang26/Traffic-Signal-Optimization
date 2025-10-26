@@ -1,0 +1,95 @@
+{
+  "application": {
+    "name": "Traffic Signal Optimization System",
+    "version": "1.0.0",
+    "debug_mode": false,
+    "log_level": "INFO"
+  },
+  "database": {
+    "path": "traffic_data.db",
+    "backup_enabled": true,
+    "backup_interval_days": 7
+  },
+  "data_ingestion": {
+    "odata_base_url": "https://data.ny.gov/resource/qjpt-z4rb.json",
+    "continuous_counts_url": "https://data.ny.gov/resource/qzve-kjga.json",
+    "short_counts_url": "https://data.ny.gov/resource/qjpt-z4rb.json",
+    "max_records_per_fetch": 10000,
+    "batch_size": 1000,
+    "rate_limit_delay_seconds": 0.5,
+    "request_timeout_seconds": 30
+  },
+  "data_processing": {
+    "validation": {
+      "max_volume_threshold": 10000,
+      "max_speed_mph": 150,
+      "max_occupancy_percent": 100,
+      "outlier_std_threshold": 3.0
+    },
+    "interpolation": {
+      "method": "linear",
+      "moving_average_window": 3,
+      "time_interval_minutes": 15
+    },
+    "peak_hours": {
+      "am_start": 6,
+      "am_end": 12,
+      "pm_start": 15,
+      "pm_end": 20
+    }
+  },
+  "simulation": {
+    "default_simulation_duration_seconds": 3600,
+    "saturation_flow_rate_vphpl": 1800,
+    "random_seed": 42,
+    "num_simulation_runs": 1,
+    "warm_up_time_seconds": 300
+  },
+  "optimization": {
+    "genetic_algorithm": {
+      "population_size": 50,
+      "generations": 100,
+      "mutation_rate": 0.1,
+      "crossover_rate": 0.8,
+      "elitism_count": 2,
+      "tournament_size": 3,
+      "random_seed": 42
+    },
+    "constraints": {
+      "cycle_length_min": 45,
+      "cycle_length_max": 120,
+      "green_time_min": 10,
+      "green_time_max": 60,
+      "yellow_time": 3.0,
+      "all_red_time": 2.0
+    },
+    "fitness_weights": {
+      "throughput": 0.35,
+      "delay": 0.35,
+      "stops": 0.15,
+      "queue": 0.15
+    },
+    "convergence_threshold": 0.001,
+    "convergence_window": 10
+  },
+  "ui": {
+    "window_width": 1400,
+    "window_height": 900,
+    "default_county": "Albany",
+    "default_day": "Monday",
+    "chart_dpi": 100,
+    "chart_style": "seaborn-v0_8-darkgrid"
+  },
+  "export": {
+    "default_format": "json",
+    "include_raw_data": false,
+    "compression": false
+  },
+  "performance": {
+    "cache_enabled": true,
+    "cache_size_mb": 100,
+    "parallel_processing": false,
+    "max_workers": 4
+  }
+}
+
