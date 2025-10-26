@@ -1,6 +1,6 @@
 # Traffic Signal Optimization System
 
-This is a traffic signal optimization tool I built for analyzing & optimizing traffic patterns using data from NYS Traffic Data Viewer. It pulls historical traffic counts, runs simulations to figure out how intersections are currently performing, then uses a genetic algorithm to find better signal timings. The whole thing works offline once you've got the data, stores everything in SQLite, & has both a GUI (built w/ Tkinter) and CLI for batch processing multiple intersections.
+This is a traffic signal optimization tool for analyzing & optimizing traffic patterns using data from NYS Traffic Data Viewer. It pulls historical traffic counts, runs simulations to figure out how intersections are currently performing, then uses a genetic algorithm to find better signal timings. The whole thing works offline once you've got the data, stores everything in SQLite, & has both a GUI (built w/ Tkinter) and CLI for batch processing multiple intersections.
 
 The optimizer focuses on real metrics that matter - throughput (vehicles/hour), avg delay per vehicle, queue lengths, & number of stops. It uses Webster's formula for delay calculations & proper queuing theory (M/M/1 model) instead of just guessing. The GA runs through different timing configurations (cycle lengths 45-120s, green splits based on actual volumes) & converges on solutions that balance all the objectives. Tested it w/ synthetic data when the API's down & it handles coordination between adjacent signals too.
 
