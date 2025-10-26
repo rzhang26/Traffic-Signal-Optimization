@@ -287,6 +287,14 @@ Based on traffic engineering standards:
 - Kendall notation (M/M/1) for queue modeling
 - Standard GA operators from Goldberg's work
 
+Relevant Papers (from Google's Project Green Light):
+- https://research.google/pubs/on-the-relationship-of-speed-limit-and-co2-emissions-in-urban-traffic/?_gl=1*1xcowit*_ga*MTQyMTY0NjA5MS4xNzYxNDI0MTYx*_ga_163LFDWS1G*czE3NjE0MjM1NjMkbzMkZzEkdDE3NjE0MjQxNjMkajU3JGwwJGgw
+- https://research.google/pubs/estimating-daily-start-times-of-periodic-traffic-light-plans-from-traffic-trajectories/?_gl=1*jhf0sh*_ga*MTQyMTY0NjA5MS4xNzYxNDI0MTYx*_ga_163LFDWS1G*czE3NjE0MjM1NjMkbzMkZzEkdDE3NjE0MjQxNjMkajU3JGwwJGgw
+- https://research.google/pubs/systematic-data-driven-detection-of-unintentional-changes-in-traffic-light-plans/?_gl=1*jhf0sh*_ga*MTQyMTY0NjA5MS4xNzYxNDI0MTYx*_ga_163LFDWS1G*czE3NjE0MjM1NjMkbzMkZzEkdDE3NjE0MjQxNjMkajU3JGwwJGgw
+- https://research.google/pubs/quantitative-approach-for-coordination-at-scale-of-signalized-2-intersection-pairs/?_gl=1*jhf0sh*_ga*MTQyMTY0NjA5MS4xNzYxNDI0MTYx*_ga_163LFDWS1G*czE3NjE0MjM1NjMkbzMkZzEkdDE3NjE0MjQxNjMkajU3JGwwJGgw
+- https://research.google/pubs/city-wide-probe-based-study-of-traffic-variability/?_gl=1*jhf0sh*_ga*MTQyMTY0NjA5MS4xNzYxNDI0MTYx*_ga_163LFDWS1G*czE3NjE0MjM1NjMkbzMkZzEkdDE3NjE0MjQxNjMkajU3JGwwJGgw 
+
+
 ## License
 
 MIT License - see LICENSE file
